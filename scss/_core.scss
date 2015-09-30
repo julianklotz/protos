@@ -1,0 +1,25 @@
+@import 'normalize';
+
+html {
+		font-family: Lato;
+    color: #222;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.btn {
+	display: block;
+	padding: 10px;
+	border-radius: 4px;
+	background-color: #768202;
+	color: white;
+	width: auto;
+	font-size: 15px;
+	text-decoration: none;
+	transition: background-color .2s ease-in-out;
+}
+
+.btn:hover {
+	background-color: #98A803;
+	color: #fff;
+}
