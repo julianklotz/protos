@@ -1,10 +1,20 @@
+$border-default: 1px solid #ccc;
+$breakpoint-master: 680px;
+
 @import 'normalize';
+@import 'utility_classes';
+@import 'popup';
+
 
 html {
 	font-family: Lato;
 	color: #222;
 	font-size: 14px;
 	line-height: 1.4;
+}
+
+input:not([type="checkbox"]):not([type="submit"]):not([type="reset"]) {
+	width: 100%;
 }
 
 .btn {
@@ -61,4 +71,77 @@ html {
 .nav-tabbed .btn.active:hover, .nav-tabbed .btn.active {
 	background-color: white;
 	color: #768202;
+}
+
+.toolbar {
+	border: $border-default;
+	width: 100%;
+}
+
+.bar-item {
+	padding: 10px 15px;
+	display: block;
+	border-right: $border-default;
+}
+
+.bar-btn {
+	text-align: center;
+}
+
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown-options {
+	z-index: 10;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	height: auto;
+	right: 0;
+	top: calc(100% + 2px);
+	position: absolute;
+	transition: max-height .2s ease-in-out;
+}
+
+.dropdown label {
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+.dropdown-options li {
+	min-width: 150px;
+	max-width: 300px;
+	padding: 10px;
+}
+
+.dropdown-options li + li {
+	border-top: $border-default;
+}
+
+.dropdown:hover .dropdown-options {
+	border: $border-default;
+	max-height: 300px;
+}
+
+.bg-info {
+	width: calc(100% - 30px);
+	background-color: rgba(161, 179, 3, 0.3);
+	padding: 15px ;
+	margin: 15px 0;
+}
+
+.dot:after {
+	font-size: 140%;
+	font-style: normal;
+	content: "\2022";
+}
+
+.red {
+	color: #C51718;
+}
+
+.green {
+	color: #95A600;
 }

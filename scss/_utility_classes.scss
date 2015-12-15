@@ -1,0 +1,33 @@
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+
+@media screen and (min-width: $breakpoint-master) {
+	.small-only {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: $breakpoint-master) {
+	.large-only {
+		display: none !important;
+	}
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
