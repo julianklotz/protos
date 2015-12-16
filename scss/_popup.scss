@@ -11,17 +11,30 @@
 }
 
 .protos-overlay-inner {
-	min-height:400px;
-	width:400px;
 	margin: 100px auto;
 	background-color: #fff;
-	border:1px solid #000;
-	padding:25px;
-	text-align:left;
+	border: 1px solid #000;
+	padding: 20px;
+	text-align: left;
 }
 
 .protos-overlay-close {
 	float: right;
 	text-align: right;
 	cursor: pointer;
+}
+
+.protos-overlay-small {
+	min-height:300px;
+	width:300px;
+}
+
+.protos-overlay-medium {
+	min-height:400px;
+	width:400px;
+}
+
+.protos-overlay-large {
+	min-height:600px;
+	width:800px;
 }
