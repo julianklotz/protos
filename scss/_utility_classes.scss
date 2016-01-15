@@ -31,3 +31,54 @@
 	clear: both;
 }
 
+$s: 10px;
+$m: 20px;
+$l: 30px;
+
+.mt-s {
+	margin-top: $s;
+}
+
+.mt-m {
+	margin-top: $m;
+}
+
+.mt-l {
+	margin-top: $l;
+}
+
+.mr-s {
+	margin-right: $s;
+}
+
+.mr-m {
+	margin-right: $m;
+}
+
+.mr-l {
+	margin-right: $l;
+}
+
+.mb-s {
+	margin-bottom: $s;
+}
+
+.mb-m {
+	margin-bottom: $m;
+}
+
+.mb-l {
+	margin-bottom: $l;
+}
+
+.ml-s {
+	margin-left: $s;
+}
+
+.ml-m {
+	margin-left: $m;
+}
+
+.ml-l {
+	margin-left: $l;
+}
