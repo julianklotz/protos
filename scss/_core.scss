@@ -18,6 +18,7 @@ input:not([type="checkbox"]):not([type="submit"]):not([type="reset"]) {
 }
 
 .btn {
+	text-align: center;
 	display: inline;
 	padding: 6px 10px;
 	border-radius: 4px;
@@ -25,7 +26,7 @@ input:not([type="checkbox"]):not([type="submit"]):not([type="reset"]) {
 	width: auto;
 	text-decoration: none;
 	transition: background-color .2s ease-in-out;
-						}
+}
 
 .btn-small {
 	padding: 2px 4px;
@@ -61,8 +62,6 @@ input:not([type="checkbox"]):not([type="submit"]):not([type="reset"]) {
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
 }
-
-
 
 .nav-tabbed .btn:hover {
 	background-color: #98A803;
@@ -145,3 +144,32 @@ input:not([type="checkbox"]):not([type="submit"]):not([type="reset"]) {
 .green {
 	color: #95A600;
 }
+
+.filter-facettes {
+	display: block;
+	margin: 1rem 0;
+
+	> * {
+		display: inline;
+		margin: 0 1rem 0 0;
+	}
+
+	> .selected {
+		color: #95a600;
+	}
+}
+
+fieldset {
+	border: none;
+	margin: 1em 0;
+	padding: 0;
+}
+
+
+.classic-form {
+	label {
+		margin-bottom: .5em;
+		display: block;
+	}
+}
+
