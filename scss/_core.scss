@@ -4,16 +4,17 @@ $breakpoint-master: 680px;
 @import 'normalize';
 @import 'utility_classes';
 @import 'popup';
+@import 'grid';
 
 
 html {
-	font-family: Lato;
+	font-family: Lato, Helvetica, sans-serif;
 	color: #222;
 	font-size: 14px;
 	line-height: 1.4;
 }
 
-input:not([type="checkbox"]):not([type="submit"]):not([type="reset"]) {
+input:not([type="checkbox"]):not([type="submit"]):not([type="reset"]):not([type="radio"]) {
 	width: 100%;
 }
 
@@ -99,7 +100,7 @@ input:not([type="checkbox"]):not([type="submit"]):not([type="reset"]) {
 	overflow: hidden;
 	height: auto;
 	right: 0;
-	top: calc(100% + 2px);
+	top: 100%;
 	position: absolute;
 	transition: max-height .2s ease-in-out;
 }
@@ -110,13 +111,15 @@ input:not([type="checkbox"]):not([type="submit"]):not([type="reset"]) {
 }
 
 .dropdown-options li {
+	padding: 15px;
+	white-space: nowrap;
 	min-width: 150px;
-	max-width: 300px;
-	padding: 10px;
-}
+	max-width: 400px;
+	border-bottom: $border-default;
 
-.dropdown-options li + li {
-	border-top: $border-default;
+	&:last-child {
+		border-bottom: none;
+	}
 }
 
 .dropdown:hover .dropdown-options {

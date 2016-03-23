@@ -5,12 +5,11 @@
 var PROTOS = PROTOS || {};
 
 PROTOS.StateMachine = Backbone.Model.extend({
-	initialize: function(initStates) {
+	name: "StateMachine: ",
+
+	initialize: function(initStates, name) {
 		this.states = initStates;
 		this.setState( initStates[0] );
-
-		console.log( "Allowed states:", this.states.toString() );
-		console.log( "Init state:", this.getState() );
 	},
 
 	setStates: function(_states) {
@@ -21,13 +20,16 @@ PROTOS.StateMachine = Backbone.Model.extend({
 		if( this.states.indexOf(newState) == -1 ) {
 			throw("State `" + newState + "` is not allowed.");
 		}
-
+		this.debug('New state is `' + newState  + '`');
 		this.set('state', newState);
 	},
 
 	getState: function() {
 		return this.get('state');
 	},
+	debug: function(msg) {
+		console.log(this.name + msg);
+	}
 });
 
 PROTOS.InPlaceEditingView = Backbone.View.extend({
